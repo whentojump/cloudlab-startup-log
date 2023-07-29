@@ -23,7 +23,8 @@ git checkout sosp-ae
 #
 
 cd scripts/ansible/
-# By default the user will be the current one (geniuser)
+# By default the user will be the current one (who instantiate the profile and
+# create this experiment)
 echo 127.0.0.1 > ansible_hosts
 # Work around the key authentication
 ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa -q -N "" && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
