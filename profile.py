@@ -24,9 +24,9 @@ import geni.rspec.emulab as emulab
 
 import os
 
-cl_repo_path              = "/local/repository/"
+cl_repo_path            = "/local/repository/"
 startup_script_rel_path = "scripts/cloudlab_startup_run_by_geniuser.sh"
-hostname                  = "acto-physical-worker-0"
+hostname                = "acto-physical-worker-0"
 
 # Create a portal context, needed to defined parameters
 pc = portal.Context()
