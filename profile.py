@@ -1,8 +1,6 @@
 """Profile for running Acto on CloudLab. There is one single physical node. The
-OS image is hardwired to Ubuntu 20.04. The hardware type is configurable by you
-during the instantiation stage. We recommend `c6420` for the best results (the
-default), but if that's not currently available, you may also select another
-type, e.g. `c8220`.
+OS image is hardwired to Ubuntu 20.04. The hardware type is hardwired to
+`c6420`.
 
 Instructions:
 Wait for the experiment to start, and then log into the node by either way:
