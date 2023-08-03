@@ -35,14 +35,8 @@ pc = portal.Context()
 request = pc.makeRequestRSpec()
 
 # Fixate parameters
-osImage = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD'
-
-# Except this one, in case c6420 is not available
-# Optional physical type for all nodes.
-pc.defineParameter("phystype",  "Optional physical node type",
-                   portal.ParameterType.STRING, "c6420",
-                   longDescription="Specify a single physical node type (pc3000,d710,etc) " +
-                   "instead of letting the resource mapper choose for you.")
+osImage  = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD'
+phystype = 'c6420'
 
 # Retrieve the values the user specifies during instantiation.
 params = pc.bindParameters()
@@ -51,8 +45,8 @@ params = pc.bindParameters()
 pc.verifyParameters()
 
 node = request.RawPC(hostname)
-node.disk_image = osImage
-node.hardware_type = params.phystype
+node.disk_image    = osImage
+node.hardware_type = phystype
 
 # Acto startup
 startup_script_path = os.path.join(cl_repo_path, startup_script_rel_path)
