@@ -58,7 +58,8 @@ Or if you imported the profile by yourself in previous sections:
     2. Click the edit icon.
     3. Click the "Update" button next to the "Repository" field.
     4. When it gets done, verify that the commit hashes are the desired values.
-- Some of the internals were discussed in https://github.com/xlab-uiuc/acto/pull/257.
+- Some of the startup script internals were discussed in https://github.com/xlab-uiuc/acto/pull/257.
+- The Ansible scripts were moved out of tree from [the other repo](https://github.com/xlab-uiuc/acto). Some of the internals were discussed there, e.g. https://github.com/xlab-uiuc/acto/pull/247
 - When you see `Oops! No parameter bindings in the rspec; did you call bindParameters()?`, the possible reason is:
     - In your default branch like `main`, some parameters are left adjustable.
     - Meanwhile, in the branch you are currently instantiating, you have hardwired everything.
