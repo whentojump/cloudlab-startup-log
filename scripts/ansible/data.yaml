@@ -18,4 +18,4 @@ PYTHON_PKGS:
   - pandas
   - tabulate
   - pydantic
-TMPFS_SIZE: 350G
+TMPFS_SIZE: 250G
