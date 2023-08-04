@@ -14,7 +14,10 @@ c220g5-110418.wisc.cloudlab.us ansible_connection=ssh ansible_user=tylergu ansib
 If you haven't installed `ansible-playbook` on your control node, run
 
 ```sh
-pip3 install ansible
+sudo apt update
+sudo apt -y install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt -y install ansible
 ansible-galaxy collection install ansible.posix
 ansible-galaxy collection install community.general
 ```
