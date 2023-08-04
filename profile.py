@@ -17,8 +17,6 @@ Use `sudo` to run root commands.
 import geni.portal as portal
 # Import the ProtoGENI library.
 import geni.rspec.pg as pg
-# Emulab specific extensions.
-import geni.rspec.emulab as emulab
 
 import os
 
@@ -35,12 +33,6 @@ request = pc.makeRequestRSpec()
 # Fixate parameters
 osImage  = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD'
 phystype = 'c6420'
-
-# Retrieve the values the user specifies during instantiation.
-params = pc.bindParameters()
-
-# Check parameter validity.
-pc.verifyParameters()
 
 node = request.RawPC(hostname)
 node.disk_image    = osImage
